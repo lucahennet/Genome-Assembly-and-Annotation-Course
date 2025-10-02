@@ -34,4 +34,4 @@ busco -i $WORKDIR/LJA_assembly/Elh-2_assembly/assembly.fasta \
 
 # Trinity (RNA-seq) assembly
 busco -i $WORKDIR/trinity_assembly/trinity_assembly.Trinity.fasta \
--l brassicales_odb10 -o busco_trinity --mode genome -c $SLURM_CPUS_PER_TASK
+-l brassicales_odb10 -o busco_trinity --mode transcriptome -c $SLURM_CPUS_PER_TASK
