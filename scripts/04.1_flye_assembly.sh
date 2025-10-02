@@ -14,6 +14,7 @@ CONTAINER_PATH="/containers/apptainer/flye_2.9.5.sif"
 
 mkdir -p $OUTDIR
 
+# Runs Flye to assemble Elh-2 PacBio HiFi reads into a genome assembly
 apptainer run --bind /data $CONTAINER_PATH \
 flye --pacbio-hifi $WORKDIR/reads/Elh-2/* \
 --out-dir $OUTDIR \

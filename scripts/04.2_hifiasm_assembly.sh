@@ -14,6 +14,7 @@ CONTAINER_PATH="/containers/apptainer/hifiasm_0.25.0.sif"
 
 mkdir -p $OUTDIR
 
+# Runs Hifiasm to assemble Elh-2 PacBio HiFi reads into a genome assembly
 apptainer run --bind /data $CONTAINER_PATH \
 hifiasm -o $OUTDIR/Elh-2.asm -t $SLURM_CPUS_PER_TASK -f0 $WORKDIR/reads/Elh-2/*
 

@@ -14,6 +14,7 @@ CONTAINER_PATH="/containers/apptainer/lja-0.2.sif"
 
 mkdir -p $OUTDIR
 
+# Runs LJA to assemble Elh-2 PacBio HiFi reads into a genome assembly
 apptainer run --bind /data $CONTAINER_PATH \
 lja -t $SLURM_CPUS_PER_TASK -o $OUTDIR/Elh-2_assembly \
 --reads $WORKDIR/reads/Elh-2/*

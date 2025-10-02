@@ -15,6 +15,9 @@ mkdir -p $OUTDIR
 
 module add Trinity
 
+# Runs Trinity on paired-end Illumina RNA-seq reads from RNAseq_Sha to assemble transcripts
 Trinity --seqType fq --max_memory 60G --CPU $SLURM_CPUS_PER_TASK \
 --left $WORKDIR/reads/RNAseq_Sha/*_1.fastq.gz --right $WORKDIR/reads/RNAseq_Sha/*_2.fastq.gz \
 --output $OUTDIR
+
+# --seqType: input files are FASTQ format; --left and --right: paired-end reads
